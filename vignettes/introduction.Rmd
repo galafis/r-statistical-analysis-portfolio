@@ -1,0 +1,172 @@
+---
+title: "Introduction to R Statistical Analysis Portfolio"
+author: "Gabriel Demetrios Lafis"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to R Statistical Analysis Portfolio}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5,
+  fig.align = "center"
+)
+```
+
+## Overview
+
+The `rstatportfolio` package provides a comprehensive framework for statistical analysis in R. It includes tools for exploratory data analysis, statistical modeling, time series forecasting, and interactive visualization. This vignette provides an introduction to the package and demonstrates its key features.
+
+## Installation
+
+You can install the development version of `rstatportfolio` from GitHub:
+
+```{r eval=FALSE}
+# Install from GitHub
+devtools::install_github("galafis/r-statistical-analysis-portfolio")
+```
+
+## Loading the Package
+
+```{r setup}
+library(rstatportfolio)
+```
+
+## Sample Data
+
+The package includes sample datasets for demonstration purposes:
+
+- `regression_data`: A dataset for regression and classification tasks
+- `time_series_data`: A dataset for time series analysis
+- `time_series_ts`: A time series object
+
+Let's load the sample data:
+
+```{r eval=FALSE}
+data(regression_data)
+data(time_series_data)
+data(time_series_ts)
+```
+
+For this vignette, we'll use the built-in `mtcars` dataset:
+
+```{r}
+# View the first few rows of mtcars
+head(mtcars)
+```
+
+## Exploratory Data Analysis
+
+The `perform_eda()` function provides a comprehensive exploratory data analysis:
+
+```{r eval=FALSE}
+# Perform EDA on mtcars
+eda_results <- perform_eda(
+  data = mtcars,
+  target = "mpg",
+  plots = TRUE
+)
+
+# View summary of EDA results
+summary(eda_results)
+```
+
+The EDA results include:
+
+- Data summary statistics
+- Variable distributions
+- Correlation analysis
+- Target variable relationships
+- Visualizations
+
+## Statistical Modeling
+
+The package provides functions for building and comparing multiple statistical models:
+
+```{r eval=FALSE}
+# Build regression models
+model_results <- build_regression_models(
+  data = mtcars,
+  target = "mpg",
+  predictors = c("cyl", "disp", "hp", "wt", "qsec"),
+  model_types = c("linear", "random_forest"),
+  test_size = 0.2,
+  seed = 123
+)
+
+# View model comparison
+summary(model_results)
+
+# Plot model comparison
+plot(model_results)
+```
+
+For classification tasks:
+
+```{r eval=FALSE}
+# Create a binary target
+mtcars$am_factor <- factor(mtcars$am, labels = c("automatic", "manual"))
+
+# Build classification models
+class_results <- build_classification_models(
+  data = mtcars,
+  target = "am_factor",
+  predictors = c("mpg", "cyl", "hp", "wt"),
+  model_types = c("logistic", "random_forest"),
+  test_size = 0.2,
+  seed = 123
+)
+
+# View model comparison
+summary(class_results)
+```
+
+## Time Series Analysis
+
+For time series analysis, the package provides the `analyze_time_series()` function:
+
+```{r eval=FALSE}
+# Load AirPassengers dataset
+data(AirPassengers)
+
+# Analyze time series
+ts_results <- analyze_time_series(
+  data = AirPassengers,
+  h = 24,  # Forecast 24 periods ahead
+  models = c("auto", "ets"),
+  seasonal = TRUE
+)
+
+# View forecast
+plot(ts_results, "forecast")
+
+# View decomposition
+plot(ts_results, "decomposition")
+
+# View ACF and PACF
+plot(ts_results, "acf")
+plot(ts_results, "pacf")
+```
+
+## Conclusion
+
+The `rstatportfolio` package provides a unified framework for statistical analysis in R. It simplifies the process of exploratory data analysis, statistical modeling, and time series forecasting. The package is designed to be user-friendly while providing powerful analytical capabilities.
+
+For more detailed examples and advanced usage, please refer to the other vignettes:
+
+- `vignette("exploratory-data-analysis")`
+- `vignette("statistical-modeling")`
+- `vignette("time-series-analysis")`
+
+## References
+
+- R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+- Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). "Welcome to the tidyverse." Journal of Open Source Software, 4(43), 1686. doi:10.21105/joss.01686.
+- Hyndman RJ, Khandakar Y (2008). "Automatic time series forecasting: the forecast package for R." Journal of Statistical Software, 26(3), 1-22. URL http://www.jstatsoft.org/article/view/v027i03.
+
