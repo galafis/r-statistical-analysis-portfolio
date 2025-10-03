@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="hero_image.png" alt="R Statistical Analysis Portfolio" width="100%">
+</div>
+
 # 🇧🇷 Portfólio de Análises Estatísticas em R | 🇺🇸 Statistical Analysis Portfolio in R
 
 <div align="center">
@@ -9,7 +13,8 @@
 
 **Portfólio completo de análises estatísticas avançadas demonstrando expertise em R**
 
-[📊 Análises](#-análises-disponíveis) • [📖 Metodologia](#-metodologia) • [⚡ Execução](#-execução-rápida) • [📈 Resultados](#-resultados)
+[📊 Análises | Analyses](#-análises--analyses) • [📖 Metodologia | Methodology](#-metodologia--methodology) • [⚡ Execução | Quick Start](#-execução-rápida--quick-start) • [📈 Resultados | Results](#-resultados--results) • [🎯 Competências | Skills](#-competências-demonstradas--skills-demonstrated) • [📚 Casos de Uso | Use Cases](#-casos-de-uso-práticos--practical-use-cases) • [🔧 Configuração | Advanced Setup](#-configuração-avançada--advanced-setup) • [📊 Métricas | Quality Metrics](#-métricas-de-qualidade--quality-metrics) • [📞 Contato | Contact](#-contato--contact) • [🤝 Contribuição | Contributing](#-contribuição--contributing) • [📄 Licença | License](#-licença--license)
+
 
 </div>
 
@@ -33,6 +38,18 @@ Este repositório apresenta um **portfólio abrangente de análises estatística
 - **Apresentar metodologias** rigorosas e cientificamente válidas
 - **Documentar processos** de forma reproduzível e transparente
 - **Aplicar técnicas** em problemas reais de diferentes áreas
+
+### 📖 Metodologia
+
+Este portfólio segue uma metodologia rigorosa para garantir a qualidade e reprodutibilidade das análises:
+
+1.  **Definição do Problema**: Compreensão clara dos objetivos e questões de pesquisa.
+2.  **Coleta e Preparação de Dados**: Aquisição, limpeza, transformação e organização dos dados.
+3.  **Análise Exploratória de Dados (EDA)**: Visualização e sumarização para identificar padrões e anomalias.
+4.  **Modelagem Estatística**: Aplicação de técnicas estatísticas apropriadas para responder às questões de pesquisa.
+5.  **Validação e Diagnóstico**: Avaliação da adequação e robustez dos modelos.
+6.  **Interpretação e Comunicação**: Tradução dos resultados em insights acionáveis e relatórios claros.
+7.  **Reprodução e Documentação**: Garantia de que todas as etapas são reproduzíveis e bem documentadas.
 
 ### 🛠️ Stack Tecnológico
 
@@ -125,9 +142,9 @@ r-statistical-analysis-portfolio/
 └── 📄 renv.lock                  # Controle de dependências
 ```
 
-### 📊 Análises Disponíveis
+### 📊 Análises Disponíveis | Available Analyses
 
-#### 1. 📈 Estatística Descritiva
+#### 1. 📈 Estatística Descritiva | Descriptive Statistics
 
 **EDA Completa (eda_complete.Rmd)**
 - Análise univariada e bivariada
@@ -155,7 +172,7 @@ summary_stats <- data %>%
 - Detecção de anomalias
 - Recomendações de limpeza
 
-#### 2. 🔍 Estatística Inferencial
+#### 2. 🔍 Estatística Inferencial | Inferential Statistics
 
 **Testes de Hipóteses (hypothesis_tests.Rmd)**
 - Testes t (uma amostra, duas amostras, pareado)
@@ -181,7 +198,7 @@ interpret_t_test(t_test_result)
 - Interpretação prática
 - Visualização de intervalos
 
-#### 3. 📊 Análise de Regressão
+#### 3. 📊 Análise de Regressão | Regression Analysis
 
 **Regressão Linear (linear_regression.Rmd)**
 - Regressão simples e múltipla
@@ -206,7 +223,7 @@ plot_residuals(model)
 - Curvas ROC e métricas de performance
 - Validação cruzada
 
-#### 4. 📋 ANOVA
+#### 4. 📋 ANOVA | Analysis of Variance
 
 **ANOVA One-Way (one_way_anova.Rmd)**
 - Comparação de múltiplos grupos
@@ -231,7 +248,7 @@ plot_anova_results(anova_result, posthoc_result)
 - Interpretação de interações
 - Gráficos de interação
 
-#### 5. 🔄 Testes Não-Paramétricos
+#### 5. 🔄 Testes Não-Paramétricos | Non-Parametric Tests
 
 **Mann-Whitney (mann_whitney.Rmd)**
 - Alternativa ao teste t
@@ -245,7 +262,7 @@ plot_anova_results(anova_result, posthoc_result)
 - Testes post-hoc não-paramétricos
 - Interpretação de ranks
 
-#### 6. ⏱️ Séries Temporais
+#### 6. ⏱️ Séries Temporais | Time Series
 
 **Modelos ARIMA (arima_models.Rmd)**
 - Identificação de modelos
@@ -270,7 +287,7 @@ plot_forecast(forecast_result)
 - Análise de componentes
 - Detecção de mudanças estruturais
 
-#### 7. 🏥 Análise de Sobrevivência
+#### 7. 🏥 Análise de Sobrevivência | Survival Analysis
 
 **Kaplan-Meier (kaplan_meier.Rmd)**
 - Estimação de curvas de sobrevivência
@@ -284,9 +301,9 @@ plot_forecast(forecast_result)
 - Diagnósticos de proporcionalidade
 - Estratificação
 
-### 🚀 Execução Rápida
+### 🚀 Execução Rápida | Quick Start
 
-#### Instalação de Dependências
+#### Instalação de Dependências | Install Dependencies
 ```r
 # Instalar pacotes necessários
 install.packages(c(
@@ -297,7 +314,7 @@ install.packages(c(
 ))
 ```
 
-#### Executar Análise Específica
+#### Executar Análise Específica | Run Specific Analysis
 ```r
 # Renderizar análise específica
 rmarkdown::render("analyses/regression/linear_regression.Rmd")
@@ -306,33 +323,33 @@ rmarkdown::render("analyses/regression/linear_regression.Rmd")
 source("scripts/render_all.R")
 ```
 
-#### Gerar Relatório Completo
+#### Gerar Relatório Completo | Generate Full Report
 ```r
 # Relatório consolidado
 rmarkdown::render("reports/statistical_portfolio.Rmd")
 ```
 
-### 📈 Resultados e Outputs
+### 📈 Resultados e Outputs | Results and Outputs
 
-#### Relatórios HTML Interativos
+#### Relatórios HTML Interativos | Interactive HTML Reports
 - Navegação por seções
 - Gráficos interativos com plotly
 - Tabelas filtráveis
 - Código R colapsável
 
-#### Relatórios PDF Científicos
+#### Relatórios PDF Científicos | Scientific PDF Reports
 - Formatação para publicação
 - Referências bibliográficas
 - Numeração automática
 - Qualidade de impressão
 
-#### Dashboards Executivos
+#### Dashboards Executivos | Executive Dashboards
 - Resumos visuais
 - KPIs estatísticos
 - Interpretações simplificadas
 - Recomendações práticas
 
-### 🎯 Competências Demonstradas
+### 🎯 Competências Demonstradas | Skills Demonstrated
 
 #### Análise Estatística
 - ✅ **Estatística Descritiva**: Medidas de tendência, dispersão e forma
@@ -444,6 +461,18 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 - **Document processes** in a reproducible and transparent way
 - **Apply techniques** to real problems from different areas
 
+### 📖 Methodology
+
+This portfolio follows a rigorous methodology to ensure the quality and reproducibility of analyses:
+
+1.  **Problem Definition**: Clear understanding of research objectives and questions.
+2.  **Data Collection and Preparation**: Acquisition, cleaning, transformation, and organization of data.
+3.  **Exploratory Data Analysis (EDA)**: Visualization and summarization to identify patterns and anomalies.
+4.  **Statistical Modeling**: Application of appropriate statistical techniques to answer research questions.
+5.  **Validation and Diagnostics**: Assessment of model adequacy and robustness.
+6.  **Interpretation and Communication**: Translation of results into actionable insights and clear reports.
+7.  **Reproducibility and Documentation**: Ensuring all steps are reproducible and well-documented.
+
 ### 🛠️ Technology Stack
 
 #### Statistical Analysis
@@ -454,6 +483,7 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 
 #### Data Manipulation
 - **tidyverse**: Complete ecosystem (dplyr, tidyr, purrr)
+
 - **data.table**: Efficient manipulation of large datasets
 - **readr/readxl**: Import data from various formats
 - **janitor**: Data cleaning and standardization
@@ -464,6 +494,21 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 - **corrplot**: Correlation matrices
 - **ggpubr**: Graphics for scientific publication
 - **patchwork**: Composition of multiple graphics
+
+#### Statistical Modeling
+- **stats**: Base R statistical functions
+- **car**: Advanced regression analysis
+- **lme4**: Mixed-effects models
+- **survival**: Survival analysis
+- **forecast**: Time series forecasting
+- **caret**: Machine learning and validation
+
+#### Statistical Tests
+- **broom**: Tidy model output
+- **emmeans**: Estimated marginal means
+- **multcomp**: Multiple comparisons
+- **nortest**: Normality tests
+- **lawstat**: Non-parametric tests
 
 ### 📊 Available Analyses
 
@@ -485,7 +530,7 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 - Model diagnostics
 - Variable selection
 
-#### 4. 📋 ANOVA
+#### 4. 📋 ANOVA | Analysis of Variance
 - One-way and two-way ANOVA
 - Post-hoc tests
 - Effect size calculation
@@ -498,7 +543,6 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 - Rank-based methods
 
 #### 6. ⏱️ Time Series
-- ARIMA models
 - Seasonal decomposition
 - Forecasting
 - Trend analysis
@@ -508,6 +552,54 @@ This repository presents a **comprehensive statistical analysis portfolio** deve
 - Cox regression
 - Hazard ratios
 - Survival curves
+
+### 🚀 Quick Start
+
+#### Install Dependencies
+```r
+# Install necessary packages
+install.packages(c(
+  "tidyverse", "rmarkdown", "knitr", "broom",
+  "car", "lme4", "survival", "forecast", "caret",
+  "ggpubr", "corrplot", "plotly", "patchwork",
+  "emmeans", "multcomp", "nortest", "lawstat"
+))
+```
+
+#### Run Specific Analysis
+```r
+# Render specific analysis
+rmarkdown::render("analyses/regression/linear_regression.Rmd")
+
+# Render all analyses
+source("scripts/render_all.R")
+```
+
+#### Generate Full Report
+```r
+# Consolidated report
+rmarkdown::render("reports/statistical_portfolio.Rmd")
+```
+
+### 📈 Results and Outputs
+
+#### Interactive HTML Reports
+- Section navigation
+- Interactive plots with plotly
+- Filterable tables
+- Collapsible R code
+
+#### Scientific PDF Reports
+- Publication-ready formatting
+- Bibliographic references
+- Automatic numbering
+- Print quality
+
+#### Executive Dashboards
+- Visual summaries
+- Statistical KPIs
+- Simplified interpretations
+- Practical recommendations
 
 ### 🎯 Skills Demonstrated
 
